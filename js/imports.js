@@ -10,6 +10,9 @@ let filesSplit = path.split("/");
 let file = filesSplit[filesSplit.length - 1];
 let filename = file.substring(0, (file.length - 5));
 
+console.log(path);
+console.log(filename);
+
 if (filesSplit[filesSplit.length - 3] == 'interiors') {
 	var folder = "../../../img/interiors/" + filename;
 	loadFileNames(folder)
