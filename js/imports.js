@@ -19,6 +19,7 @@ if (filesSplit[filesSplit.length - 3] == 'interiors') {
 			var carouselHtml = "<div id='property-single-carousel' class='owl-carousel owl-arrow gallery-property'>";
 			filesArr.forEach(async file => {
 				carouselHtml = carouselHtml + "<div class='carousel-item-b'><img src='" + folder + "/" + file + "'></div>";
+				console.log(folder + "/" + file);
 			});
 			carouselHtml = carouselHtml + "</div>";
 
