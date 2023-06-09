@@ -453,11 +453,15 @@ a:hover {
 }
 
 .back-to-top i {
-  padding-top: 12px;
+  padding-top: 2px;
   color: #fff;
 }
 
-/* Prelaoder */
+.back-to-top.none {
+  display: none;
+}
+
+/* Preloader */
 
 #preloader {
   position: fixed;
@@ -618,8 +622,8 @@ a:hover {
 
 .navbar-default.navbar-reduce {
   transition: all .5s ease-in-out;
-  padding-top: 19px;
-  padding-bottom: 19px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .navbar-default.navbar-reduce .nav-link {
@@ -1066,7 +1070,7 @@ a:hover {
 ======================================*/
 
 .card-overlay-a-content {
-  transition: all .5s ease-in;
+  transition: all .1s ease-in;
   position: absolute;
   width: 100%;
   bottom: 0px;
@@ -1555,7 +1559,7 @@ a:hover {
   padding-top: 60px;
   margin-top: 60px;
   background: #f3f3f3;
-}
+  }
 
 .section-footer ul {
   line-height: 2;
@@ -2065,3 +2069,11 @@ footer .credits {
   }
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
