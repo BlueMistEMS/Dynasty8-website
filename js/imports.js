@@ -15,7 +15,6 @@ if (filesSplit[filesSplit.length - 3] == 'interiors') {
 	var folder = "../../../img/interiors/" + filename;
 	loadFileNames(folder)
 		.then((data) => {
-			//console.log(data);
 			var filesArr = data;
 			var carouselHtml = '';
 			var indicatorsHtml = '';
