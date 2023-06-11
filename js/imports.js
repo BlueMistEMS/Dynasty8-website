@@ -42,6 +42,7 @@ if (filesSplit[filesSplit.length - 3] == 'interiors') {
 }
 
 function loadFileNames(dir) {
+	console.log('shit')
 	return new Promise((resolve, reject) => {
 		try {
 			var fileNames = new Array();
