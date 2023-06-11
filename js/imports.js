@@ -44,9 +44,16 @@ function loadFileNames(dir) {
 			$.ajax({
 				url: dir,
 				success: function (data) {
-					for (var i = 1; i < $(data).find('td a').length; i++) {
-						var elem = $(data).find('td a')[i];
-						fileNames.push(elem.innerHTML);
+					if ($(location).attr('hostname') == '127.0.0.1') {
+						for (var i = 1; i < $(data).find('li span.name').length; i++) {
+							var elem = $(data).find('li span.name')[i];
+							fileNames.push(elem.innerHTML);
+						}
+					} else {
+						for (var i = 1; i < $(data).find('td a').length; i++) {
+							var elem = $(data).find('td a')[i];
+							fileNames.push(elem.innerHTML);
+						}
 					}
 					return resolve(fileNames);
 				}

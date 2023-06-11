@@ -6,12 +6,12 @@
   <title>EchoRP Dynasty 8</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <!-- Import Custom/Main JS file -->
-  <script rel="preload" src="../../../js/main.js"></script>
-
   <!-- Import Header and Footer -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script rel="preload" src="../../../js/imports.js"></script>
+
+  <!-- Import Custom/Main JS file -->
+  <script rel="preload" src="../../../js/main.js"></script>
 
   <!-- Favicons -->
   <link href="../../../img/favicon.ico" rel="icon">
@@ -69,7 +69,21 @@
   <section class="property-single nav-arrow-b">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12" id="prop-img-carousel">
+        <div class="col-sm-12">
+          <div id="c" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators" id="property-carousel-indicators">
+            </ol>
+            <div class="carousel-inner" id="property-carousel-images">
+            </div>
+            <a class="carousel-control-prev" href="#c" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#c" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
           <div class="row justify-content-between">
             <div class="col-md-5 col-lg-4">
               <div class="property-price d-flex justify-content-center foo">
