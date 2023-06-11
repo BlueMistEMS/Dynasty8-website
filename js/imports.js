@@ -12,7 +12,7 @@ let filename = file.substring(0, (file.length - 5));
 
 
 if (filesSplit[filesSplit.length - 3] == 'interiors') {
-	var folder = "../../img/interiors/" + filename;
+	var folder = "../../../img/interiors/" + filename;
 	console.log(folder);
 	loadFileNames(folder)
 		.then((data) => {
