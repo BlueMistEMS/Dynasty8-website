@@ -48,8 +48,9 @@ function loadFileNames(dir) {
 			$.ajax({
 				url: dir,
 				success: function (data) {
-					for (var i = 1; i < $(data).find('li span.name').length; i++) {
-						var elem = $(data).find('li span.name')[i];
+					for (var i = 1; i < $(data).find('td a.href').length; i++) {
+						var elem = $(data).find('td a.href')[i];
+						console.log(elem);
 						fileNames.push(elem.innerHTML);
 					}
 					return resolve(fileNames);
