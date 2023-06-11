@@ -37,6 +37,33 @@ if (filesSplit[filesSplit.length - 3] == 'interiors') {
 		});
 }
 
+if (filesSplit[filesSplit.length - 2] == 'recent_repos') {
+	var folder = "../../../img/recent_repos/";
+	loadFileNames(folder)
+		.then((data) => {
+			var filesArr = data;
+			var carouselHtml = '';
+			var indicatorsHtml = '';
+			filesArr.forEach(async (file, ind) => {
+				if (ind == 0) {
+					carouselHtml = carouselHtml + "<div class='carousel-item active'><img class='d-block w-100' src='" + folder + "/" + file + "'></div>";
+					indicatorsHtml = indicatorsHtml + "<li data-target='#c' data-slide-to='" + ind + "' class='active'></li>";
+				} else {
+					carouselHtml = carouselHtml + "<div class='carousel-item'><img class='d-block w-100' src='" + folder + "/" + file + "'></div>";
+					indicatorsHtml = indicatorsHtml + "<li data-target='#c' data-slide-to='" + ind + "' ></li>";
+				}
+			});
+			var carouselEle = document.getElementById("property-carousel-images");
+			carouselEle.innerHTML = carouselHtml;
+			var indicatorsEle = document.getElementById("property-carousel-indicators");
+			indicatorsEle.innerHTML = indicatorsHtml;
+		})
+		.catch((error) => {
+			//alert('Images could not be loaded. Please tag Clint from IT so he can check into this issue.');
+			console.error(error);
+		});
+}
+
 function loadFileNames(dir) {
 	return new Promise((resolve, reject) => {
 		try {
