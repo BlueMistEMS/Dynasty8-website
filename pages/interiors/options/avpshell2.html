@@ -69,7 +69,21 @@
   <section class="property-single nav-arrow-b">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12" id="prop-img-carousel">
+        <div class="col-sm-12">
+          <div id="c" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators" id="property-carousel-indicators">
+            </ol>
+            <div class="carousel-inner" id="property-carousel-images">
+            </div>
+            <a class="carousel-control-prev" href="#c" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#c" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
           <div class="row justify-content-between">
             <div class="col-md-5 col-lg-4">
               <div class="property-price d-flex justify-content-center foo">
@@ -132,13 +146,15 @@
   <div id="preloader"></div>
 
   <!-- JavaScript Libraries -->
+  <script src="../../../lib/scrollreveal/scrollreveal.min.js"></script>
   <script src="../../../lib/jquery/jquery.min.js"></script>
   <script src="../../../lib/jquery/jquery_migrate.min.js"></script>
   <script src="../../../lib/popper/popper.min.js"></script>
   <script src="../../../lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../../../lib/bootstrap/js/util.js"></script>
   <script src="../../../lib/easing/easing.min.js"></script>
   <script src="../../../lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="../../../lib/scrollreveal/scrollreveal.min.js"></script>
+  <script src="../../../lib/carousel/carousel.js"></script>
 </body>
 
 </html>

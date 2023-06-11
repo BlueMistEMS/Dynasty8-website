@@ -10,25 +10,28 @@ let filesSplit = path.split("/");
 let file = filesSplit[filesSplit.length - 1];
 let filename = file.substring(0, (file.length - 5));
 
-console.log(path);
-console.log(filesSplit[filesSplit.length - 3]);
-console.log(filename);
 
 if (filesSplit[filesSplit.length - 3] == 'interiors') {
 	var folder = "../../../img/interiors/" + filename;
 	loadFileNames(folder)
 		.then((data) => {
-			console.log(data);
+			//console.log(data);
 			var filesArr = data;
-			var carouselHtml = "<div id='property-single-carousel' class='owl-carousel owl-arrow gallery-property'>";
-			filesArr.forEach(async file => {
-				carouselHtml = carouselHtml + "<div class='carousel-item-b'><img src='" + folder + "/" + file + "'></div>";
-				console.log(folder + "/" + file);
+			var carouselHtml = '';
+			var indicatorsHtml = '';
+			filesArr.forEach(async (file, ind) => {
+				if (ind == 0) {
+					carouselHtml = carouselHtml + "<div class='carousel-item active'><img class='d-block w-100' src='" + folder + "/" + file + "'></div>";
+					indicatorsHtml = indicatorsHtml + "<li data-target='#c' data-slide-to='" + ind + "' class='active'></li>";
+				} else {
+					carouselHtml = carouselHtml + "<div class='carousel-item'><img class='d-block w-100' src='" + folder + "/" + file + "'></div>";
+					indicatorsHtml = indicatorsHtml + "<li data-target='#c' data-slide-to='" + ind + "' ></li>";
+				}
 			});
-			carouselHtml = carouselHtml + "</div>";
-
-			var element = document.getElementById("prop-img-carousel");
-			element.innerHTML = carouselHtml;
+			var carouselEle = document.getElementById("property-carousel-images");
+			carouselEle.innerHTML = carouselHtml;
+			var indicatorsEle = document.getElementById("property-carousel-indicators");
+			indicatorsEle.innerHTML = indicatorsHtml;
 		})
 		.catch((error) => {
 			alert('Images could not be loaded. Please tag Clint from IT so he can check into this issue.');
