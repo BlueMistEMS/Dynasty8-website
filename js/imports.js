@@ -13,6 +13,7 @@ let filename = file.substring(0, (file.length - 5));
 
 if (filesSplit[filesSplit.length - 3] == 'interiors') {
 	var folder = "../../../img/interiors/" + filename;
+	console.log(folder);
 	loadFileNames(folder)
 		.then((data) => {
 			var filesArr = data;
@@ -27,6 +28,8 @@ if (filesSplit[filesSplit.length - 3] == 'interiors') {
 					indicatorsHtml = indicatorsHtml + "<li data-target='#c' data-slide-to='" + ind + "' ></li>";
 				}
 			});
+			console.log(carouselHtml);
+			console.log(indicatorsHtml);
 			var carouselEle = document.getElementById("property-carousel-images");
 			carouselEle.innerHTML = carouselHtml;
 			var indicatorsEle = document.getElementById("property-carousel-indicators");
