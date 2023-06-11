@@ -32,7 +32,7 @@ if (filesSplit[filesSplit.length - 3] == 'interiors') {
 			indicatorsEle.innerHTML = indicatorsHtml;
 		})
 		.catch((error) => {
-			alert('Images could not be loaded. Please tag Clint from IT so he can check into this issue.');
+			//alert('Images could not be loaded. Please tag Clint from IT so he can check into this issue.');
 			console.error(error);
 		});
 }
