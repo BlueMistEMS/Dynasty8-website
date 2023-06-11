@@ -42,15 +42,15 @@ if (filesSplit[filesSplit.length - 3] == 'interiors') {
 }
 
 function loadFileNames(dir) {
-	console.log('shit')
+	console.log('shit2')
 	return new Promise((resolve, reject) => {
 		try {
 			var fileNames = new Array();
 			$.ajax({
 				url: dir,
 				success: function (data) {
-					for (var i = 1; i < $(data).find('td a.href').length; i++) {
-						var elem = $(data).find('td a.href')[i];
+					for (var i = 1; i < $(data).find('td a').length; i++) {
+						var elem = $(data).find('td a')[i];
 						console.log(elem);
 						fileNames.push(elem.innerHTML);
 					}
