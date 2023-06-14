@@ -101,19 +101,19 @@ a:hover {
   margin: 0;
 }
 
-/*------/ Nav Pills  /------*/
+/*------/ Nav property  /------*/
 
-.nav-pills-a.nav-pills .nav-link {
+.nav-property-a.nav-property .nav-link {
   color: #000000;
   position: relative;
   font-weight: 600;
 }
 
-.nav-pills-a.nav-pills .nav-link.active {
+.nav-property-a.nav-property .nav-link.active {
   background-color: transparent;
 }
 
-.nav-pills-a.nav-pills .nav-link.active:after {
+.nav-property-a.nav-property .nav-link.active:after {
   content: '';
   position: absolute;
   left: 0;
