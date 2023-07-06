@@ -471,7 +471,8 @@ a:hover {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #271f1f;
+  background-image: url('/img/d8_preloader.jpg');
+  background-size: cover;
 }
 
 #preloader:before {
