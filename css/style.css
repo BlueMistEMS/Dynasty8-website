@@ -2102,7 +2102,7 @@ th, td {
 }
 
 td:nth-child(odd) {
-  width: 70%;
+  width: 67%;
 }
 
 tr:nth-child(even) {
